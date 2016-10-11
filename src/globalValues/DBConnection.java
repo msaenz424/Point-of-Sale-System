@@ -4,7 +4,7 @@ import java.sql.*;
 public class DBConnection {
 	private static String connectionString = "jdbc:mysql://localhost:3306/POS";
 	private static String connectionUser = "root";
-	private static String connectionPassword = "hicetnunc";
+	private static String connectionPassword = "";
 	public static Connection con = null;
 	public String userID = "";
 	public static int selectedIDIndex = -1;
