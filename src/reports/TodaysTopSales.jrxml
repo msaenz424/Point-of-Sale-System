@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2016-10-11T13:03:41 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TodaysTopSales" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cce338d0-c443-42cd-a758-73e0e5304f26">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="YHRvZGF5U2FsZXNCeVByb2R1Y3RgICwxNSwxNSw2NDJiN2FlMi1hZDA1LTQxZDEtYWFmMS0yMDk3&#xA;Y2IwMzQyZWE7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[SELECT * FROM `todaySalesByProduct`]]>
+	</queryString>
+	<field name="productName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ItemsSold" class="java.math.BigDecimal"/>
+	<field name="Total" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="570" height="30" uuid="e4746607-24dd-4ef0-b1d1-4d53a00b8650"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="370" height="30" uuid="4aebece1-085c-40a8-b525-8ae1da4117a7"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[YOUR COMPANY NAME HERE]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="460" y="10" width="100" height="20" uuid="d8e53fd2-e1c0-460b-87cc-3dd7238f7dd4"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="570" height="30" backcolor="#BFBFBF" uuid="8381b358-a326-4315-9bdb-48c923639538"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="20" y="0" width="260" height="30" uuid="5025280a-80a5-4d8c-b09d-2eab23291691"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="70" height="30" uuid="6a0479aa-bfb2-4254-9da0-beb4aa0593c4"/>
+				<textElement textAlignment="Right">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Items Sold]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="100" height="30" uuid="a3909510-2995-4430-86a0-63c71a0e998b"/>
+				<textElement textAlignment="Right">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="260" height="13" uuid="f9bbdce0-40f6-47e5-9187-179b1bd0d7dc"/>
+				<textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="70" height="13" uuid="ce0f3ba6-aaee-48bc-aa83-a168a8122564"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{ItemsSold}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="100" height="13" uuid="38c0ac31-3643-4043-96b1-c0f2a5a0c1a4"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="30" splitType="Stretch"/>
+	</summary>
+</jasperReport>
